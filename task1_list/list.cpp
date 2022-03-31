@@ -6,7 +6,11 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+	if (NULL == pRoot)
+	{
+		std::cout << "Lista nie moze byc zainicjalizowana.\n";
+		return NULL;
+	}
 	return pRoot;
 }
 
